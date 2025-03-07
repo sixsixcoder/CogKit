@@ -25,7 +25,7 @@ dependencies = [
   "datasets>=3.2.0",
   # "decord>=0.6.0",
   "deepspeed>=0.16.3",
-  "diffusers @ git+https://github.com/zRzRzRzRzRzRzR/diffusers@cogview4_control",
+  "diffusers @ git+https://github.com/zRzRzRzRzRzRzR/diffusers.git@cogview4_control",
   "imageio-ffmpeg>=0.6.0",
   "imageio>=2.37.0",
   "opencv-python>=4.11.0.86",
