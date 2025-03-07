@@ -17,7 +17,7 @@ If you want to finetune CogVideo series, please install the following packages a
 ### Installation
 
 ```bash
-pip install 'cogmodels @ https://github.com/zRzRzRzRzRzRzR/cogkits.git@test'
+pip install 'cogmodels @ git+https://github.com/zRzRzRzRzRzRzR/cogkits.git@test'
 ```
 
 ### Finetune
