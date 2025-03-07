@@ -58,6 +58,9 @@ local_scheme = 'no-local-version'
 [tool.hatch.build.hooks.vcs]
 version-file = 'src/cogmodels/_version.py'
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 
 [tool.ruff]
 exclude = ['.git', '.mypy_cache', '.ruff_cache', '.venv', 'dist']
