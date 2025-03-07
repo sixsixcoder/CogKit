@@ -5,7 +5,7 @@ export TOKENIZERS_PARALLELISM=false
 
 # Model Configuration
 MODEL_ARGS=(
-    --model_path "/ome/lhy/code/cogmodels/CogView4-6B"
+    --model_path "THUDM/CogView4-6B"
     --model_name "cogview4-6b"
     --model_type "t2i"
     --training_type "sft"
@@ -13,14 +13,13 @@ MODEL_ARGS=(
 
 # Output Configuration
 OUTPUT_ARGS=(
-    --output_dir "/home/lhy/code/cogmodels/src/cogmodels/finetune/diffusion/train_result/cogview4/sft-pred-noise"
+    --output_dir "/path/to/output"
     --report_to "tensorboard"
 )
 
 # Data Configuration
 DATA_ARGS=(
-    # --data_root "/home/lhy/code/cogmodels/src/cogmodels/finetune/data/t2i"
-    --data_root "/home/lhy/code/cogmodels/src/cogmodels/finetune/data/t2i-foo"
+    --data_root "/path/to/data"
     --train_resolution "1024x1024"  # (height x width)
 )
 

@@ -13,13 +13,13 @@ MODEL_ARGS=(
 
 # Output Configuration
 OUTPUT_ARGS=(
-    --output_dir "/home/lhy/code/cogmodels/src/cogmodels/finetune/diffusion/train_result"
+    --output_dir "/path/to/output"
     --report_to "tensorboard"
 )
 
 # Data Configuration
 DATA_ARGS=(
-    --data_root "/home/lhy/code/cogmodels/src/cogmodels/finetune/data/i2v-noimg"
+    --data_root "/path/to/data"
     --train_resolution "81x768x1360"  # (frames x height x width), frames should be 8N+1 and height, width should be multiples of 16
 )
 
@@ -33,6 +33,7 @@ TRAIN_ARGS=(
     --gradient_accumulation_steps 1
     --mixed_precision "bf16"  # ["no", "fp16"] Only CogVideoX-2B supports fp16 training
     ########################################################################
+    --learning_rate 2e-5
 )
 
 # System Configuration

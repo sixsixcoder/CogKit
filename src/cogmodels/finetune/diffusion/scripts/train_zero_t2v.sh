@@ -33,6 +33,7 @@ TRAIN_ARGS=(
     --gradient_accumulation_steps 1
     --mixed_precision "bf16"  # ["no", "fp16"] Only CogVideoX-2B supports fp16 training
     ########################################################################
+    --learning_rate 2e-5
 )
 
 # System Configuration

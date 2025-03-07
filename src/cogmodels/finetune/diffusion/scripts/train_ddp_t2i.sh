@@ -6,7 +6,7 @@ export TOKENIZERS_PARALLELISM=false
 
 # Model Configuration
 MODEL_ARGS=(
-    --model_path "/home/lhy/code/cogmodels/CogView4-6B"
+    --model_path "THUDM/CogView4-6B"
     --model_name "cogview4-6b"
     --model_type "t2i"
     --training_type "lora"
@@ -14,25 +14,24 @@ MODEL_ARGS=(
 
 # Output Configuration
 OUTPUT_ARGS=(
-    --output_dir "/home/lhy/code/cogmodels/src/cogmodels/finetune/diffusion/train_result/cogview4/lora"
+    --output_dir "/path/to/output"
     --report_to "tensorboard"
 )
 
 # Data Configuration
 DATA_ARGS=(
-    --data_root "/home/lhy/code/cogmodels/src/cogmodels/finetune/data/t2i"
+    --data_root "/path/to/data"
     --train_resolution "1024x1024"  # (height x width)
 )
 
 # Training Configuration
 TRAIN_ARGS=(
-    # --train_epochs 1 # number of training epochs
-    --train_epochs 100 # number of training epochs
+    --train_epochs 1 # number of training epochs
     --seed 42 # random seed
-    # --batch_size 1
-    --batch_size 3
+    --batch_size 1
     --gradient_accumulation_steps 1
     --mixed_precision "bf16"  # ["no", "fp16"] # Only CogVideoX-2B supports fp16 training
+    --learning_rate 2e-5
 )
 
 # System Configuration
